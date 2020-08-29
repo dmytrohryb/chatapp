@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyleSheet, View, Image, Text, TextInput} from 'react-native'
+import {StyleSheet, View, Image, Text, TextInput, TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign';
 
 export default class LoginScreen extends React.Component{
@@ -37,13 +37,15 @@ export default class LoginScreen extends React.Component{
                         value={this.state.name}
                     />
                 </View>
-                <View style={styles.circleButton}>
-                    <Icon
-                        size={42}
-                        name='right'
-                        color='#fff'
-                    />
-                </View>
+                <TouchableOpacity onPress={this.continue}>
+                    <View style={styles.circleButton}>
+                        <Icon
+                            size={42}
+                            name='right'
+                            color='#fff'
+                        />
+                    </View>
+                </TouchableOpacity>
             </View>
         )
     }
